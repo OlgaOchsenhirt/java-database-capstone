@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+
+
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Admin-Dashboard</title>
+
+ <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+ <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+<script th:src="@{/js/render.js}" defer></script>
+<script th:src="@{/js/util.js}" defer></script>
+
+<script th:src="@{/js/components/header.js}" defer></script>
+<script th:src="@{/js/components/footer.js}" defer></script>
+
+   </head>
+
+<body>
+
+
+<div class="container">
+    <div class="wrapper">
+        <div id="header"></div>
+
+
+   <main class="main-content">
+
+    <h2>Admin-Dashboard</h2>
+
+   <input type="text" id="searchBar" placeholder="Suche nach Arztname"
+/>
+
+
+<select id="timeFilter">
+    <option>Uhrzeit</option>
+    </select>
+
+<select id="specialtyFilter">
+    <option>Fachgebiet</option>
+    </select>
+    
+    <div id="content"></div>
+
+   </main>
+
+</div>
+</div>
+   
+
+    <div id="footer"></div>
+
+
+<div id="modal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <div id="modal-body"></div>
+</div>
+
+
+<script type="module" src="../js/services/adminDashboard.js" defer></script>
+<script type="module" src="../js/components/doctorCard.js" defer></script>
+
+</body>
+
+</html>
